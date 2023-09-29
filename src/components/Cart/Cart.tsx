@@ -22,7 +22,7 @@ const Cart = () => {
         <div className='px-6 py-10 flex flex-col'>
           <div className='flex justify-between text-lg'>
             <div>Subtotal</div>
-            <div>{totalAmount}</div>
+            <div>$ {totalAmount}</div>
           </div>
           <div className='flex justify-between text-2xl'>
             <div>Total</div>

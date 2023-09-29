@@ -9,34 +9,34 @@ import Product from '../Product/Product';
 import "./product-slider.scss"
 const ProductSlider = () => {
     return (
-        <div className='main_slider_container'>
+        <div className='main_slider_container container mx-auto'>
             <Swiper modules={[
                 Pagination, Navigation
             ]}
                 loop={false}
                 navigation={true}
                 breakpoints={{
-                    320:{
-                        slidesPerView:1,
-                        spaceBetween:30
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
                     },
-                    768:{
-                        slidesPerView:2,
-                        spaceBetween:30
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
                     },
-                    1024:{
-                        slidesPerView:2,
-                        spaceBetween:30
+                    1024: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
                     },
-                    1440:{
-                        slidesPerView:5,
-                        spaceBetween:30
+                    1440: {
+                        slidesPerView: 5,
+                        spaceBetween: 30
                     },
                 }}
                 pagination={{
-                    clickable:true
+                    clickable: true
                 }}
-                className='productSlider mx-auto max-w-[360px] md:max-w-lg xl:max-w-[1410px]'>
+                className='productSlider mx-auto md:max-w-lg xl:max-w-[1410px]'>
                 <SwiperSlide><Product /></SwiperSlide>
                 <SwiperSlide><Product /></SwiperSlide>
                 <SwiperSlide><Product /></SwiperSlide>
@@ -45,7 +45,7 @@ const ProductSlider = () => {
                 <SwiperSlide><Product /></SwiperSlide>
                 <SwiperSlide><Product /></SwiperSlide>
             </Swiper>
-            
+
         </div>
     )
 }

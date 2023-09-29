@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation'
 import Product from '../Product/Product';
 import "./product-slider.scss"
-const ProductSlider = () => {
+const ProductSlider = ({ products }: any) => {
     return (
         <div className='main_slider_container container mx-auto'>
             <Swiper modules={[
@@ -37,13 +37,22 @@ const ProductSlider = () => {
                     clickable: true
                 }}
                 className='productSlider mx-auto md:max-w-lg xl:max-w-[1410px]'>
-                <SwiperSlide><Product /></SwiperSlide>
-                <SwiperSlide><Product /></SwiperSlide>
-                <SwiperSlide><Product /></SwiperSlide>
-                <SwiperSlide><Product /></SwiperSlide>
-                <SwiperSlide><Product /></SwiperSlide>
-                <SwiperSlide><Product /></SwiperSlide>
-                <SwiperSlide><Product /></SwiperSlide>
+                {
+                    products?.data?.map((product: any) => {
+                        return (
+                            <SwiperSlide>
+                                <Product
+                                    price={product.price}
+                                    product_name={product.product_name}
+                                    image={product.image}
+                                    description={product.description}
+                                />
+                            </SwiperSlide>
+                        )
+                    })
+                }
+
+
             </Swiper>
 
         </div>

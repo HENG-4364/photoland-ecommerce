@@ -27,10 +27,10 @@ export default function RootLayout({
           referrerPolicy="no-referrer"
         />
       </head>
-      <body className={hanuman.className} suppressHydrationWarning={true}>
-        <CartProvider>
-          <AppLayout>{children}</AppLayout>
-        </CartProvider>
+      <body className={hanuman.className} suppressHydrationWarning={true}>      
+          <CartProvider>
+            <AppLayout>{children}</AppLayout>
+          </CartProvider>    
       </body>
     </html>
   )

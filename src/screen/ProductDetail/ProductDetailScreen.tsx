@@ -5,9 +5,10 @@ import { CartContext } from '@/context/CartContext/CartContext'
 import { useParams } from 'next/navigation'
 import React, { useContext } from 'react'
 
-const ProductDetailScreen = () => {
+const ProductDetailScreen = ({ data }: any) => {
     const { addToCart } = useContext(CartContext);
     const { id } = useParams();
+    
     return (
         <div className='mb-16 pt-44 lg:pt-[30px] xl:pt-0'>
             <div className='container mx-auto'>
@@ -42,7 +43,7 @@ const ProductDetailScreen = () => {
                 </div>
 
                 {/* relatest products */}
-                <RelatestProducts />
+                <RelatestProducts data={data}/>
             </div>
         </div>
     )
